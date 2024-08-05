@@ -2,25 +2,19 @@
   for = "/*"
   [headers.values]
     X-Content-Type-Options = "nosniff"
+    Content-Encoding = "br"
+
 [[headers]]
   for = "/*.wasm"
   [headers.values]
     Content-Type = "application/wasm"
 
 [[headers]]
-  for = "/*.wasm.gz"
-  [headers.values]
-    Content-Type = "application/wasm"
-    Content-Encoding = "gzip"
-
-[[headers]]
-  for = "/*.data.gz"
+  for = "/*.data"
   [headers.values]
     Content-Type = "application/octet-stream"
-    Content-Encoding = "gzip"
 
 [[headers]]
-  for = "/*.js.gz"
+  for = "/*.js"
   [headers.values]
     Content-Type = "application/javascript"
-    Content-Encoding = "gzip"
