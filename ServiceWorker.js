@@ -1,9 +1,9 @@
 const cacheName = "GirlsAndRobots-Lo-fi Sort-0.2.0";
 const contentToCache = [
-    "Build/7.loader.js",
-    "Build/7.framework.js",
-    "Build/7.data",
-    "Build/7.wasm",
+    "Build/8.loader.js",
+    "Build/8.framework.js.gz",
+    "Build/8.data.gz",
+    "Build/8.wasm.gz",
     "TemplateData/style.css"
 
 ];
