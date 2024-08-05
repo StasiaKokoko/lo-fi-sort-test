@@ -1,33 +1,26 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    X-Frame-Options = "ALLOW-FROM https://telegram.org/"
-    Content-Security-Policy = "frame-ancestors 'self' https://telegram.org/"
-
-[[headers]]
-  for = "/*.data"
-  [headers.values]
-    Content-Type = "application/octet-stream"
-
+    X-Content-Type-Options = "nosniff"
 [[headers]]
   for = "/*.wasm"
   [headers.values]
     Content-Type = "application/wasm"
 
 [[headers]]
-  for = "/*.js"
+  for = "/*.wasm.gz"
   [headers.values]
-    Content-Type = "application/javascript"
-
-[[headers]]
-  for = "/*.gz"
-  [headers.values]
+    Content-Type = "application/wasm"
     Content-Encoding = "gzip"
 
-[build]
-  publish = "."
+[[headers]]
+  for = "/*.data.gz"
+  [headers.values]
+    Content-Type = "application/octet-stream"
+    Content-Encoding = "gzip"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+[[headers]]
+  for = "/*.js.gz"
+  [headers.values]
+    Content-Type = "application/javascript"
+    Content-Encoding = "gzip"
